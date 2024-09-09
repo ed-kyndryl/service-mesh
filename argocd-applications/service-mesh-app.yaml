@@ -1,0 +1,25 @@
+# File: service-mesh-gitops/argocd-applications/service-mesh-app.yaml
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: service-mesh
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/edskii08/federated_service_mesh.git
+    targetRevision: main
+    path: charts/service-mesh
+    helm:
+      valueFiles:
+        - ../../cluster-configs/ocp1/service-mesh-values.yaml  
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: istio-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
