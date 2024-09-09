@@ -8,7 +8,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "4"
     argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
-  version: v2.6
+  version: v2.6 # Create parameter for it in Helm
   tracing:
     type: None
     sampling: 10000

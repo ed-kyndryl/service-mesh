@@ -9,4 +9,4 @@ metadata:
     argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
   members:
-    - test
+    - test # Create parameter for it in Helm
