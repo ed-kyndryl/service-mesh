@@ -4,7 +4,9 @@ kind: ServiceMeshMemberRoll
 metadata:
   name: default
   namespace: {{ .Values.meshNamespace }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
   members:
-    # List your application namespaces here
     - test

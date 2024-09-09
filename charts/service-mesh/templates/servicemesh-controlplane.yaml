@@ -4,21 +4,15 @@ kind: ServiceMeshControlPlane
 metadata:
   name: {{ .Values.meshName }}
   namespace: {{ .Values.meshNamespace }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
-  version: v2.3
+  version: v2.6
   tracing:
-    type: Jaeger
+    type: None
     sampling: 10000
-  policy:
-    type: Istiod
   addons:
-    jaeger:
-      name: jaeger
-      install:
-        storage:
-          type: Memory
-    prometheus:
-      enabled: true
     kiali:
       enabled: true
     grafana:
