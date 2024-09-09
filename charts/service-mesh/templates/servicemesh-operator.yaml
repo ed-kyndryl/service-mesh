@@ -9,6 +9,8 @@ metadata:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   channel: stable
+  installPlanApproval: Automatic
   name: servicemeshoperator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
+  startingCSV: servicemeshoperator.v2.6.1
