@@ -1,2 +1,5 @@
 meshName: ocp1-basic
 meshNamespace: istio-system
+
+jaeger:
+  startingCSV: "jaeger-operator.v1.57.0-10"

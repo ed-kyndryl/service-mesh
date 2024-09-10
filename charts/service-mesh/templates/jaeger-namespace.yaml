@@ -1,0 +1,8 @@
+# jaeger-namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: openshift-distributed-tracing
+  annotations:
+    "helm.sh/resource-policy": keep
+    argocd.argoproj.io/sync-wave: "2"
