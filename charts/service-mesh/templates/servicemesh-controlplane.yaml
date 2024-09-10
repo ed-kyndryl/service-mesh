@@ -5,7 +5,7 @@ metadata:
   name: {{ .Values.meshName }}
   namespace: {{ .Values.meshNamespace }}
   annotations:
-    argocd.argoproj.io/sync-wave: "4"
+    argocd.argoproj.io/sync-wave: "5"
     argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
   version: v2.6 # Create parameter for it in Helm
