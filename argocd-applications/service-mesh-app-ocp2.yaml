@@ -18,7 +18,7 @@ spec:
       valueFiles:
         - ../../cluster-configs/ocp2/service-mesh-values.yaml  
   destination:
-    name: ocp2
+    server: https://api.ocp2.edskii.online:6443
     namespace: istio-system
   syncPolicy:
     automated:
