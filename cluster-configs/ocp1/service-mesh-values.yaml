@@ -1,5 +1,5 @@
-meshName: ocp1-basic
-meshNamespace: istio-system
+meshName: cdc-mesh
+meshNamespace: cdc-mesh-system
 
 jaeger:
   startingCSV: "jaeger-operator.v1.57.0-10"

@@ -3,7 +3,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: service-mesh-ocp2
+  name: service-mesh-ndc
   namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "0"  # Control sync order
@@ -19,7 +19,7 @@ spec:
         - ../../cluster-configs/ocp2/service-mesh-values.yaml  
   destination:
     server: https://api.ocp2.edskii.online:6443
-    namespace: istio-system
+    namespace: ndc-mesh-system
   syncPolicy:
     automated:
       prune: true
